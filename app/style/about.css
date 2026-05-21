@@ -1,4 +1,5 @@
-* { 
+* {
+    /*seletor universal*/
     box-sizing: border-box;
 }
 
@@ -23,8 +24,15 @@ body {
     width: 100%;
 }
 
-#container nav img{
+#container nav img {
     max-width: 200px;
+}
+
+#container nav .toggle {
+    display: none;
+    height: 15px;
+    width: 15px;
+    background-color: #c9bda5;
 }
 
 .link-do-cabecalho {
@@ -34,4 +42,36 @@ body {
     font-variant: small-caps;
     font-weight: bold;
     font-size: 20pt;
+    background-color: orange;
+}
+
+@media (max-width: 600px) {
+    header nav img {
+        max-height: 100px;
+    }
+    
+    #container nav {
+        flex-direction: column;
+        width: 100%;
+
+    }
+    
+    #container nav .toggle {
+        display: block;
+    }
+
+    #container nav img {
+        /* max-height: fit-content; */
+        width: 100%;
+    }
+
+    #container nav a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #c9bda5;
+        position: relative;
+        left: 120%;
+    }
+
+
 }
