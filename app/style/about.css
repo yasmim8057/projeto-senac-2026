@@ -124,7 +124,6 @@ main a {
     }
 
     #container nav.active .toggle {
-        display: block;
         transform: rotate(225deg);
         margin-top: 5px;
     }

@@ -1,4 +1,5 @@
-* { /*seletor universal*/
+* {
+    /*seletor universal*/
     box-sizing: border-box;
 }
 
@@ -19,12 +20,18 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 10%;
+    height: 100px;
     width: 100%;
 }
 
-#container nav img{
+#container nav img {
     max-width: 200px;
+}
+
+#container nav .toggle {
+    display: none;
+    height: 20px;
+    width: 20px;
 }
 
 .link-do-cabecalho {
@@ -72,7 +79,74 @@ main a:hover {
 }
 
 @media (max-width: 650px) {
+    header nav img {
+        max-height: 80px;
+
+    }
+
     #container nav {
-        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #container nav .toggle {
+        display: block;
+        border-right: 2px solid #c9bda5;
+        border-bottom: 2px solid #c9bda5;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+
+
+    #container nav a {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid #c9bda5;
+        position: absolute;
+        z-index: 10;
+    }
+
+    #container nav a:nth-of-type(1) {
+        top: 100px;
+    }
+
+    #container nav a:nth-of-type(2) {
+        top: 160px;
+    }
+
+    #container nav a:nth-of-type(3) {
+        top: 220px;
+    }
+
+    #container nav.active .toggle {
+        transform: rotate(225deg);
+        margin-top: 5px;
+    }
+
+    #container nav.active a {
+        display: block;
+        background-color: #f4ecd8;
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        border-top: 1px solid #c9bda5;
+    }
+
+    #container nav.active a:nth-of-type(1) {
+        bottom: 100px;
+    }
+
+    #container nav.active a:nth-of-type(2) {
+        bottom: 160px;
+    }
+
+    #container nav.active a:nth-of-type(3) {
+        bottom: 220px;
+        border-bottom: 2px solid #5e594e;
     }
 }
