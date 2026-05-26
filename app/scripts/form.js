@@ -4,17 +4,16 @@ form.addEventListener('submit', function(event) {
 
         event.preventDefault();
 
-        const autorInput = document.getElementById('autor')
-        const tituloInput = document.getElementById('titulo')
-        const historiaInput = document.getElementById('historia')
-        const historiasContainer = document.getElementById('historias')
+        const form_data = new FormData(event.target)
 
-        const autor = autorInput.value;
-        const titulo = tituloInput.value;
-        const historia = historiaInput.value;
+        const autor = form_data.get('autor')
+        const titulo = form_data.get('titulo')
+        const email = form_data.get('email')
+        const historia = form_data.get('historia')
 
         if (!autor || !historia) { //verificação de campos vazios
-                "Os campos `Autor` e `História` são obrigatórios!"
+                alert("Os campos `Autor` e `História` são obrigatórios!")
+                return
         }
 
         const article = document.createElement('article');
@@ -22,11 +21,13 @@ form.addEventListener('submit', function(event) {
 
         article.innerHTML =
                 `<h3>${titulo}</h3>
-         <p><strong> Autor: ${autor} </strong></p>
-         <p>${historia.replace('/\n/g', '<br />')}</p>
-         <hr />`;
+                <p><strong> Autor: ${autor} </strong></p>
+                <p><small> Email: ${email} </small></p>
+                <p>${historia.replace('/\n/g', '<br />')}</p>
+                <hr />`;
 
 
-        historiasContainer.appendChild(article);
+        document.getElementById('historias').appendChild(article)
+
         event.target.reset()
 })

@@ -24,15 +24,17 @@
 
     <main>
       <form id="post-form">
-        <label for="autor"> Autor: </label>
+        <label for="autor"> Autor (ex.: João da Silva): </label>
         <input id="autor" type="text" name="autor" placeholder="João da Silva">
 
         <label for="titulo"> Título da história: </label>
         <input id="titulo" type="text" name="titulo" placeholder="A vida é carnaval">
       
+        <label for="titulo"> Email: </label>
+        <input id="titulo" type="email" name="email" placeholder="joao.silva@example.com">
+
         <label for="historia"> História: </label>
-        <textarea id="historia" cols="50" rows="20" placeholder="Minha vida, nem sempre foi festa, mas coração sempre foi carnaval...">
-        </textarea>
+        <textarea id="historia" cols="50" rows="20" name="historia" placeholder="Meu coração é carnaval"></textarea>
 
         <button type="submit"> Enviar </button>
           
@@ -40,9 +42,7 @@
     </main>
 
     <footer>
-      <div id="historias">
-        
-      </div>
+      <div id="historias"></div>
     </footer>
   </div>
 </body>
