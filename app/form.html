@@ -21,7 +21,7 @@
         <a class="link-do-cabecalho" href="./form.html">Fofoca?!</a>
       </nav>
     </header>
-
+    
     <main>
       <form id="post-form">
         <label for="autor"> Autor (ex.: João da Silva): </label>
@@ -29,7 +29,7 @@
 
         <label for="titulo"> Título da história: </label>
         <input id="titulo" type="text" name="titulo" placeholder="A vida é carnaval">
-      
+
         <label for="titulo"> Email: </label>
         <input id="titulo" type="email" name="email" placeholder="joao.silva@example.com">
 
@@ -37,18 +37,21 @@
         <textarea id="historia" cols="50" rows="20" name="historia" placeholder="Meu coração é carnaval"></textarea>
 
         <button type="submit"> Enviar </button>
-          
+
       </form>
+      <div id="historias">
+        <dialog id="modal">
+          <button autofocus>Fechar</button>
+          <div id="modal-content"></div>
+        </dialog>
+      </div>
     </main>
 
-    <dialog id="modal">
-      <button autofocus>Fechar</button>
-      <div id="modal-content"></div>
-    </dialog>
 
-    <footer>
-      <div id="historias"></div>
-    </footer>
+
+
+
+
   </div>
 </body>
 
