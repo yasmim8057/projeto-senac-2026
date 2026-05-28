@@ -24,7 +24,6 @@ form.addEventListener('submit', function(event) {
         article.innerHTML =
                 `<h3>${titulo}</h3>
                 <p><strong> Autor: ${autor} </strong></p>
-                <p><small> Email: ${email} </small></p>
                 <p style="white-space: pre-wrap;">${historia}</p>`;
 
         article.addEventListener('click', function() {
