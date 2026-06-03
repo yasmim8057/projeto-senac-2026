@@ -61,6 +61,82 @@ def ajustar_terca(dias: list):
     dias.insert(1, 'Terça')
     return dias
 
+
+##################################### Médio ################################
+
+# Exercício 11
+numeros = [10, 20, 30, 40, 50, 60]
+def tres_primeiros(numeros: list):
+    return numeros[:3]
+
+# Exercício 12
+convidados = ['Alice', 'Bob', 'Arthur', 'Carol']
+def remover_arthur(convidados: list):
+    if 'Arthur' in convidados:
+        convidados.remove('Arthur')
+        return convidados
+    
+    return "Nome não encontrado."
+
+# Exercício 13
+letras = ['A', 'B', 'C', 'D', 'E']
+def inverter_lista(letras: list):
+    letras.reverse()
+    return letras
+
+# Exercício 14
+pontos = [45, 12, 89, 5, 23]
+def ordenar_pontos(pontos: list):
+    pontos.sort()
+    return pontos
+
+# Exercício 15
+valores = [12, 5, 8, 22, 9, 15]
+
+def soma_extremos(valores: list):
+    return valores[0] + valores[-1]
+
+# Exercício 16
+ingredientes = ['ovo', 'farinha', 'açúcar', 'leite']
+
+def tem_chocolate(ingredientes:list):
+    if 'chocolate' in ingredientes:
+        return True
+    return False
+
+# Exercício 17
+amigos_escola = ['Pedro', 'Lucas']
+amigos_bairro = ['Mariana', 'Julia']
+
+def juntar_amigos(amigos_escola: list, amigos_bairro: list):
+    amigos_escola.extend(amigos_bairro)
+    return amigos_escola
+
+# Exercício 18
+anos = [2018, 2019, 2020, 2021, 2022, 2023, 2024]
+def ultimos_tres(anos: list):
+    return anos[-3:]
+
+##################################### Difícil ################################
+
+# Exercício 19
+brinquedos = ['carrinho', 'boneca', 'bola', 'pião']
+def remover_brinquedo_seguro(brinquedos:list, item:str):
+    if item in brinquedos:
+        brinquedos.remove(item)
+        return brinquedos
+    return 'Este brinquedo não está na lista!'
+
+# Exercício 20
+numeros_para_trocar = [1,2,3,4]
+def trocar_extremos(numeros_para_trocar: list):
+    numero_comeco = numeros_para_trocar[0]
+    numeros_para_trocar[0] = numeros_para_trocar[-1]
+    numeros_para_trocar[-1] = numero_comeco
+
+    return numeros_para_trocar
+    
+
 if __name__ == '__main__':
     print("Resultado exercício 1: ")
     fruta = primeira_fruta(frutas)
@@ -100,3 +176,46 @@ if __name__ == '__main__':
     print("\n Resultado exercício 10:")
     semana = ajustar_terca(dias)
     print(semana)
+
+    print("\n Resultado exercício 11:")
+    tres_numeros = tres_primeiros(numeros)
+    print(tres_numeros)
+
+    print("\n Resultado exercício 12:")
+    lista_sem_arthur = remover_arthur(convidados)
+    print(lista_sem_arthur)
+
+    print("\n Resultado exercício 13:")
+    lista_inversa = inverter_lista(letras)
+    print(lista_inversa)
+
+    print("\n Resultado exercício 14:")
+    lista_ordenada = ordenar_pontos(pontos)
+    print(lista_ordenada)
+
+    print("\n Resultado exercício 15:")
+    soma_ext = soma_extremos(valores)
+    print(soma_ext)
+    
+    print("\n Resultado exercício 16:")
+    chocolate = tem_chocolate(ingredientes)
+    print(chocolate)
+
+    print("\n Resultado exercício 17:")
+    amigos = juntar_amigos(amigos_escola, amigos_bairro)
+    print(amigos)
+
+    print("\n Resultado exercício 18:")
+    ultimos_tres_anos = ultimos_tres(anos)
+    print(ultimos_tres_anos)
+
+    print("\n Resultado exercício 19:")
+    brinquedo_removido = remover_brinquedo_seguro(brinquedos, 'pião')
+    print(brinquedo_removido)
+    mensagem = remover_brinquedo_seguro(brinquedos, 'lego')
+    print(mensagem)
+
+    print("\n Resultado exercício 20:")
+    lista_extremos_trocados = trocar_extremos(numeros_para_trocar)
+    print(lista_extremos_trocados)
+
