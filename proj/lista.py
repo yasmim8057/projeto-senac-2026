@@ -1,70 +1,102 @@
-#!/bin/usr/env python3
+# Exercício 1
+frutas = ['maçã', 'banana', 'laranja', 'morango']
 
-## Comentário:
-##
-## Esse arquivo mostra métodos comuns em listas em python
-## e uma breve descrição do que eles fazem.
-## Os exemplos serão feitos usando uma cesta de frutas, como exemplo.
+def primeira_fruta(frutas: list):
+    return frutas[0]
 
-cesta_de_frutas = ['banana', 'caqui', 'maçã', 'bergamota', 'abacaxi', 'laranja']
+# Exercício 2
+animais = ['gato', 'cachorro', 'passarinho', 'coelho']
 
-## 1
-## Para adicionar um elemento usamos o método `append`.
-## É importanate salientar que o tipo do dado deve ser o mesmo
-cesta_de_frutas.append('lima')
+def ultimo_animal(animais: list):
+    return animais[-1]
 
-## 2
-## Para remover todos os elementos de uma lista, usamos o método `clear`
-cesta_de_frutas.clear()
+#Exercício 3:
+compras = []
 
-## 3
-## Para percorrer uma lista podemos usar um bloco `for`
-## Esse código percorre toda a lista e printa qual é a fruta
-for fruta in cesta_de_frutas:
+def adicionar_compras(compras: list):
+    compras.append('arroz')
+    compras.append('feijão')
+    compras.append('batata')
+
+    return compras
+
+# Exercício 4
+notas = [7.5, 8.0, 6.0, 9.5, 10.0]
+def quantidade_notas(notas: list):
+    return len(notas)
+
+#Exercício 5
+cores = ['vermelho', 'verde', 'azul']
+
+def mudar_cor(cores: list):
+    indice = cores.index('verde')
+    cores[indice] = 'amarelo'
+    return cores
+
+#Exercício 6
+tarefas = ['estudar', 'limpar quarto', 'lavar louça']
+def esvaziar_tarefas(tarefas: list):
+    tarefas.clear()
+    return tarefas
+
+#Exercício 7
+respostas = ['Sim', 'Não', 'Sim', 'Sim', 'Não', 'Sim']
+def contar_sim(respostas: list):
+    return respostas.count('Sim')
+
+#Exercício 8
+fila = ['Ana', 'Bruno', 'Carlos', 'Diego']
+def remover_ultimo(fila: list):
+    return fila.pop()
+
+#Exercício 9
+canais = ['Globo', 'SBT', 'Record', 'Band']
+
+def posicao_sbt(canais: list):
+    return canais.index('SBT')
+
+# Exercício 10
+dias = ['Segunda', 'Quarta', 'Quinta']
+def ajustar_terca(dias: list):
+    dias.insert(1, 'Terça')
+    return dias
+
+if __name__ == '__main__':
+    print("Resultado exercício 1: ")
+    fruta = primeira_fruta(frutas)
     print(fruta)
 
-## 4
-## Para remover um tipo de fruta usaremos uma técnica que percorre a lista e procura por uma fruta,
-## se existir, então remove;
+    print("\n Resultado exercício 2:")
+    animal = ultimo_animal(animais)
+    print(animal)
 
-for fruta in cesta_de_frutas:
-    if fruta == 'banana':
-        cesta_de_frutas.remove(fruta)
+    print("\n Resultado exercício 3:")
+    lista_compras = adicionar_compras(compras)
+    print(lista_compras)
 
-## 5        
-## Para separar a lista em diferentes tamanhos podemos, por exemplo, usar índices a nosso favor
-## junto de uma estrutura `while` ou ainda em uma estrutura `for`. Deixarei ambos exemplos abaixo:
+    print("\n Resultado exercício 4:")
+    print(quantidade_notas(notas))
 
-# for
-nova_cesta = []
-for fruta in cesta_de_frutas:
-    if cesta_de_frutas.index(fruta) % 2 == 0:
-        nova_cesta.append(fruta)
-        cesta_de_frutas.remove(fruta)
+    print("\n Resultado exercício 5:")
+    lista_cores = mudar_cor(cores)
+    print(lista_cores)
 
-# while
-nova_cesta = []
-index = 0 
-while (index < len(cesta_de_frutas)):
-    if index % 2 == 0:
-        nova_cesta.append(cesta_de_frutas[index])
-        cesta_de_frutas.remove(cesta_de_frutas[index])
+    print("\n Resultado exercício 6:")
+    lista_tarefas_vazia = esvaziar_tarefas(tarefas)
+    print(lista_tarefas_vazia)
 
-## 6
-## Para mover um tipo de fruta da cesta, para outra cesta,
-## podemos usar um código parecido com o código do ex. 4
+    print("\n Resultado exercício 7:")
+    contagem_sim = contar_sim(respostas)
+    print(contagem_sim)
 
-nova_cesta = []
-for fruta in cesta_de_frutas:
-    if fruta == 'maçã':
-        nova_cesta.append(fruta)
-        cesta_de_frutas.remove(fruta)
+    print("\n Resultado exercício 8:")
+    pessoa_removida = remover_ultimo(fila)
+    print(pessoa_removida)
 
-## 7
-## Para remover uma fruta do final da lista  podemos usar o método `pop`
-## ou remover o elemento com último índice que acessamos com o índice [-1]
-cesta_de_frutas.pop()
-cesta_de_frutas.remove(cesta_de_frutas[-1])
+    print("\n Resultado exercício 9:")
+    indice_sbt = posicao_sbt(canais)
+    print(indice_sbt)
 
-## 8
-## Para remover do ínicio
+    print("\n Resultado exercício 10:")
+    semana = ajustar_terca(dias)
+    print(semana)
