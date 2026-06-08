@@ -1,4 +1,3 @@
-
 class Gato:
 
     pelagem:str = ""
