@@ -7,3 +7,6 @@ class Character:
     def __init__(self, nome:str, vida: float):
         self.nome = nome
         self.vida = vida
+
+    def atacar(self):
+        raise NotImplementedError("Será implementado pela classe filha")
