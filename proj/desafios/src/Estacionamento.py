@@ -8,10 +8,10 @@ import datetime as dt
 
 class Estacionamento():
 
-    vagas: list[Vaga]
+    vagas: list[Vaga | None] = [None] * 10
 
 
-    def __init__(self, vagas: list[Vaga]):
+    def __init__(self, vagas: list):
         self.vagas = vagas
 
 
