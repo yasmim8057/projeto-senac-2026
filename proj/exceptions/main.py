@@ -10,9 +10,12 @@ if __name__ == '__main__':
     try:
         casa.abrir_porta(chave)
     except ChaveErradaError:
-        print('Trocando o código da chave...')
+        
         chave.troca_codigo(1234)
+        casa.troca_chave(chave)
         print(casa.abrir_porta(chave))
+    
+
         
 
         

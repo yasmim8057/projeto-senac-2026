@@ -11,7 +11,7 @@ class Casa:
 
         if chave.codigo != 1234:
             raise ChaveErradaError(f'Código da chave incorreto, o código informado foi: {chave.codigo}')
-        return 'Ṕorta aberta com sucesso'
+        return 'Porta aberta com sucesso'
         
 
     def troca_chave(self, chave: Chave):
