@@ -17,4 +17,10 @@ def bem_vindo():
 
 @app.get("/hello")
 def ola_mundo():
-    return {"message": "Olá! Turma!"}
+    return """
+        <head>
+        </head>
+        <body>
+            <h1> </h1>
+        </body>
+"""

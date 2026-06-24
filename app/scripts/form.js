@@ -1,6 +1,6 @@
 import { openStoryModal } from "./modal.js"
 
-const form = document.getElementById('post-form');
+const form = document.getElementById('story-form');
 
 form.addEventListener('submit', function(event) {
 
