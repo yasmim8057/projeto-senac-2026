@@ -1,3 +1,0 @@
-class VagaIndisponivelException(Exception):
-    pass
-

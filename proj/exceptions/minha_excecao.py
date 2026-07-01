@@ -1,4 +1,0 @@
-class ChaveErradaError(Exception):
-    pass
-
-
